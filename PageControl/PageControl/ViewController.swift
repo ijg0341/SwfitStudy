@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     let images = [ "1", "2", "3", "4", "5" ]
@@ -14,14 +15,17 @@ class ViewController: UIViewController {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        
         return imageView
     }()
+    
+    let imageView2 = UIImageView()
     
     let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         return pageControl
     }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +38,14 @@ class ViewController: UIViewController {
     }
     
     func viewInit() {
+        
         view.addSubview(imageView)
         view.addSubview(pageControl)
     
         let safeArea = view.safeAreaLayoutGuide
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
         imageView.leftAnchor.constraint(equalTo: safeArea.leftAnchor).isActive = true
         imageView.rightAnchor.constraint(equalTo: safeArea.rightAnchor).isActive = true
