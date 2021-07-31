@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YqH-On-Naw">
+                                <rect key="frame" x="10" y="343" width="394" height="210"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3k3-6d-v5I">
+                                        <rect key="frame" x="0.0" y="1" width="394" height="67.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="asr-mS-0z9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-Td-Gib">
+                                        <rect key="frame" x="0.0" y="70" width="394" height="70"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AIV-pX-tmd">
+                                                <rect key="frame" x="0.0" y="1" width="197" height="67.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Ibq-su-aPr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PNY-BN-w9e">
+                                                <rect key="frame" x="197" y="1" width="197" height="67.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="fXY-eJ-iYy"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-TS-WDw">
+                                        <rect key="frame" x="0.0" y="141" width="394" height="67.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Kt3-f4-u8B"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YqH-On-Naw" secondAttribute="trailing" constant="10" id="PDJ-HJ-7vg"/>
+                            <constraint firstItem="YqH-On-Naw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bCB-V2-RoF"/>
+                            <constraint firstItem="YqH-On-Naw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lZi-cz-61I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downImageView" destination="TKZ-TS-WDw" id="w1F-sP-WU0"/>
+                        <outlet property="leftImageView" destination="AIV-pX-tmd" id="IwT-3Y-ibm"/>
+                        <outlet property="rightImageView" destination="PNY-BN-w9e" id="Ogj-mM-def"/>
+                        <outlet property="upImageView" destination="3k3-6d-v5I" id="jpn-GD-wjd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.down.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.left.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.right.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.up.square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
